@@ -8,6 +8,6 @@
 class vmware_fusion {
   package { 'VMware Fusion':
     source   => 'https://s3.amazonaws.com/boxen-downloads/vmware/VMware-Fusion-5.0.3-1040386-light.dmg',
-    provider => 'appdmg'
+    provider => 'appdmg_eula'
   }
 }
