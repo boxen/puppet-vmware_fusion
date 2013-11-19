@@ -14,3 +14,17 @@ include vmware_fusion
 
 **Note**: While this installs VMware Fusion.app from their DMG, you need to
 run VMware Fusion so the installation completes.
+
+## Specifying a version
+
+If you want to use Fusion 5, you can specify a version:
+
+``` puppet
+class { 'vmware_fusion': version => '5.0.3-1040386' }
+```
+
+or in hiera
+
+``` yaml
+"vmware_fusion::version": "5.0.3-1040386"
+```
