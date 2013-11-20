@@ -5,9 +5,11 @@
 # Usage:
 #
 #   include vmware_fusion
-class vmware_fusion {
+class vmware_fusion (
+  $version = '6.0.2-1398658',
+) {
   package { 'VMware Fusion':
-    source   => 'https://s3.amazonaws.com/boxen-downloads/vmware/VMware-Fusion-5.0.3-1040386-light.dmg',
+    source   => "https://s3.amazonaws.com/boxen-downloads/vmware/VMware-Fusion-${version}-light.dmg",
     provider => 'appdmg'
   }
 }
