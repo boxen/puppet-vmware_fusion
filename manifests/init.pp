@@ -6,10 +6,18 @@
 #
 #   include vmware_fusion
 class vmware_fusion (
-  $version = '6.0.2-1398658',
+  $url_base = 'https://s3.amazonaws.com/boxen-downloads/vmware',
+  $version  = '7.0.0-2103067',
 ) {
+  $_version = $version ? {
+    /^7/    => $version,
+    default => "${version}-light",
+  }
+
+  $url = "${url_base}/VMware-Fusion-${_version}.dmg"
+
   package { 'VMware Fusion':
-    source   => "https://s3.amazonaws.com/boxen-downloads/vmware/VMware-Fusion-${version}-light.dmg",
+    source   => $url,
     provider => 'appdmg'
   }
 }
