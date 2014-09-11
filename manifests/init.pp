@@ -14,7 +14,7 @@ class vmware_fusion (
     default => "${version}-light",
   }
 
-  $url = "${url_base}/VMWare-Fusion-${_version}.dmg"
+  $url = "${url_base}/VMware-Fusion-${_version}.dmg"
 
   package { 'VMware Fusion':
     source   => $url,
