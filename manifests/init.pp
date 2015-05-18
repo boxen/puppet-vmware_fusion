@@ -16,7 +16,7 @@ class vmware_fusion (
 
   $url = "${url_base}/VMware-Fusion-${_version}.dmg"
 
-  package { "VMware Fusion_${_version}":
+  package { "VMware_Fusion_${_version}":
     source   => $url,
     provider => 'appdmg'
   }
